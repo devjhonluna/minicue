@@ -1,5 +1,4 @@
-<script>
-    
+<script>   
 
     export let onClick= () => {};
    

@@ -1,12 +1,11 @@
 <script>
-  import Github from "../components/icons/Github.svelte";
-  import logo from "../assets/minicue-logo.png"
+  import Github from "$components/icons/Github.svelte";
+  import logo from "$assets/minicue-logo.png";
   // your script goes here
 </script>
 
 <!-- markup (zero or more items) goes here -->
 <header class="flex justify-center xs:justify-between w-full flex-wrap gap-2">
-  
   <a class="flex items-center space-x-3" href="/">
     <img src={logo} alt="logo-app" class="size-12" />
     <h1 class="font-courier-prime font-bold text-base">MINICUE</h1>

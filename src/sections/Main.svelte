@@ -1,35 +1,21 @@
 <script>
   import { useCompletion } from "@ai-sdk/svelte";
-  import CustomButton from "../components/form/CustomButton.svelte";
-  import CustomTextField from "../components/form/CustomTextField.svelte";
-  import FormContainer from "../components/form/FormContainer.svelte";
-  import Copy from "../components/icons/Copy.svelte";
-  import Reset from "../components/icons/Reset.svelte";
-  import { copiarAlPortapapeles, Validate } from "../helpers/utils";
-  import { duracionOpts, idiomasOpts } from "../helpers/variables";
+  import CustomButton from "$components/form/CustomButton.svelte";
+  import CustomTextField from "$components/form/CustomTextField.svelte";
+  import FormContainer from "$components/form/FormContainer.svelte";
+  import Copy from "$components/icons/Copy.svelte";
+  import Reset from "$components/icons/Reset.svelte";
+  import { copiarAlPortapapeles, Validate } from "$helpers/utils";
+  import { duracionOpts, idiomasOpts } from "$helpers/variables";
   
-  /**
-   * designacion del tipo any al hook de useCompletion
-   * @type {*}
-  */
-  const { complete, completion } = useCompletion();
+  const { complete, completion,setCompletion } = useCompletion();
  
-  /**
-   * designacion de los parametros de tema, duracion y idiomas
-   * @param {string} tema
-   * @param {*} duracionSelected
-   * @param {*} idiomasSelected
-   */
+
   let tema=""
   let duracionSelected=duracionOpts.find((item)=>item.id==0)
   let idiomasSelected = idiomasOpts.find((item) => item.id === 0);
 
- /**
- * Generador del guion de tiktok
- *
- * @async
- * @returns {Promise<void>}
- */
+
   async function handleSubmit() {
     const errors = Validate(tema, duracionSelected, idiomasSelected);
     if (errors.length > 0) {
@@ -45,17 +31,12 @@
     const prompt = `Quiero crear un video viral de TikTok sobre ${formData.tema} que debe tener una duracion de ${formData.duracion?.text} en el idioma ${formData.idioma?.text}. ¿Me puedes ayudar a crear un guión literario que capture la atención de mi audiencia objetivo y los haga querer compartirlo con sus amigos?`;
     await complete(prompt);
   }
- /**
- * Borrado de campos del modulo
- *
- * @async
- * @returns {Promise<void>}
- */
+
   async function resetFields() {
     tema = "";
     duracionSelected = duracionOpts.find((item) => item.id === 0);
     idiomasSelected = idiomasOpts.find((item) => item.id === 0);
-    completion.set("")
+    setCompletion("")
   }
 </script>
 

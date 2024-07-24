@@ -1,15 +1,11 @@
 <script>
-  import LinkedIn from "../components/icons/LinkedIn.svelte";
-  import X from "../components/icons/X.svelte";
+  import LinkedIn from "$components/icons/LinkedIn.svelte";
+  import X from "$components/icons/X.svelte";
 
     // your script goes here
 </script>
 
-<style>
-    /* your styles go here */
-</style>
 
-<!-- markup (zero or more items) goes here -->
 <footer class="flex flex-wrap gap-2 justify-center sm:justify-between font-courier-prime">
     <p>Powered by <span class="font-bold">Meta AI</span></p>
      <div class="flex gap-2">
