@@ -34,7 +34,7 @@ GROQ_API_KEY=tu api de GROQ
 
 - Actualmente, MiniCue es un prototipo con funcionalidad básica para guiones de TikTok.
 
-- En un futuro deseado, planeamos convertirlo en un servicio completo (SAAS) y agregar más características.
+- En un futuro no tan lejando, planeamos convertirlo en un servicio completo (SAAS) y agregar más características.
 
 ## Contacto
 
