@@ -2,6 +2,10 @@
 
 MiniCue es un generador de guiones de video para formatos cortos, impulsado por inteligencia artificial. Si necesitas crear guiones para tus videos de TikTok u otras plataformas similares, MiniCue está aquí para ayudarte.
 
+https://github.com/user-attachments/assets/f285a71d-c913-4481-aca7-d2c194a92a6d
+
+
+
 ## Desarrollo
 
 __Frontend__: MiniCue utiliza SvelteKit como su framework de frontend. Además, hemos implementado Tailwind CSS para el diseño y la interfaz de usuario.
