@@ -38,7 +38,7 @@ GROQ_API_KEY=tu api de GROQ
 
 ## Contacto
 
-Autor: Jhon Alexander Luna
-Github: [devjhonluna](https://github.com/devjhonluna)
-LinkedIn: [Jhon Alexander Luna](https://www.linkedin.com/in/jhon-alexander-luna-gonzalez-ab30a017a/)
-Web: https://portafolio-devjl.netlify.app/
+Autor: Jhon Alexander Luna  
+Github: [devjhonluna](https://github.com/devjhonluna)  
+LinkedIn: [Jhon Alexander Luna](https://www.linkedin.com/in/jhon-alexander-luna-gonzalez-ab30a017a/)  
+Web: https://portafolio-devjl.netlify.app/ 
