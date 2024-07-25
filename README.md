@@ -1,10 +1,13 @@
-# Mini Cue: generador de guiones
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/1cdefd97-9cf8-4c67-ad04-414c9739ca2e" width="512" alt="MiniCue"/>
+</div>
+
+# Mini Cue : generador de guiones
 
 MiniCue es un generador de guiones de video para formatos cortos, impulsado por inteligencia artificial. Si necesitas crear guiones para tus videos de TikTok u otras plataformas similares, MiniCue está aquí para ayudarte.
 
 https://github.com/user-attachments/assets/f285a71d-c913-4481-aca7-d2c194a92a6d
-
-
 
 ## Desarrollo
 
