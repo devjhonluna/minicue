@@ -7,21 +7,21 @@
   import Reset from "$components/icons/Reset.svelte";
   import { copiarAlPortapapeles, Validate } from "$helpers/utils";
   import { duracionOpts, idiomasOpts } from "$helpers/variables";
-  
-  const { complete, completion,setCompletion } = useCompletion();
- 
 
-  let tema=""
-  let duracionSelected=duracionOpts.find((item)=>item.id==0)
+  const { complete, completion, setCompletion } = useCompletion();
+
+  let tema = "";
+  let duracionSelected = duracionOpts.find((item) => item.id == 0);
   let idiomasSelected = idiomasOpts.find((item) => item.id === 0);
-
 
   async function handleSubmit() {
     const errors = Validate(tema, duracionSelected, idiomasSelected);
-    if (errors.length > 0) {
+     if (errors.length > 0) {
       alert("Errores:\n" + errors.join("\n"));
+      console.log(errors)
       return;
-    }
+    }  
+ 
     const formData = {
       tema: tema,
       duracion: duracionSelected,
@@ -29,14 +29,15 @@
     };
 
     const prompt = `Quiero crear un video viral de TikTok sobre ${formData.tema} que debe tener una duracion de ${formData.duracion?.text} en el idioma ${formData.idioma?.text}. ¿Me puedes ayudar a crear un guión literario que capture la atención de mi audiencia objetivo y los haga querer compartirlo con sus amigos?`;
-    await complete(prompt);
+    //await complete(prompt);
+    console.log(prompt);
   }
 
   async function resetFields() {
     tema = "";
     duracionSelected = duracionOpts.find((item) => item.id === 0);
     idiomasSelected = idiomasOpts.find((item) => item.id === 0);
-    setCompletion("")
+    setCompletion("");
   }
 </script>
 
@@ -149,7 +150,7 @@ autofill:pb-2"
           ><Copy sizeRem="1.25rem" /></CustomButton
         >
         <CustomButton
-        onClick={resetFields}
+          onClick={resetFields}
           aria-label="reset"
           class="bg-transparent hover:bg-dawnfeather hover:text-corbeau px-4 py-2 border border-dawnfeather rounded-lg sm:w-fit sm:self-center duration-150 transition ease-in"
           ><Reset sizeRem="1.25rem" /></CustomButton

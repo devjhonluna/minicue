@@ -16,16 +16,17 @@ export async function copiarAlPortapapeles() {
   }
 }
 
+
 /**
  * Description placeholder
  *
  * @param {*} setTema
  * @param {*} setDuracion
  * @param {*} setIdioma
- * @returns {string[]}
  */
 export const Validate = (setTema, setDuracion, setIdioma) => {
-  let errors = [];
+
+ let errors = [];
   if (setTema.trim() === "") {
     errors.push("el tema es requerido");
   }
@@ -35,6 +36,7 @@ export const Validate = (setTema, setDuracion, setIdioma) => {
   if (setIdioma.id === 0) {
     errors.push("el idioma es requerido");
   }
-  return errors;
+  return errors; 
+
 };
 

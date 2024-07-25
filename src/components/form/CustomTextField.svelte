@@ -7,6 +7,7 @@
   export let value = "";
   export let label = "";
   export let classLabel=""
+
 </script>
 
 <!-- markup (zero or more items) goes here -->
@@ -33,6 +34,7 @@
       {label}
     </label>
   {/if}
+  
 </div>
 
 <style>
