@@ -17,7 +17,7 @@
   async function handleSubmit() {
     const errors = Validate(tema, duracionSelected, idiomasSelected);
      if (errors.length > 0) {
-      alert("Errores:\n" + errors.join("\n"));      
+      alert("Errores:\n" + errors.join("\n"));          
       return;
     }  
  
@@ -28,6 +28,7 @@
     };
 
     const prompt = `Quiero crear un video viral de TikTok sobre ${formData.tema} que debe tener una duracion de ${formData.duracion?.text} en el idioma ${formData.idioma?.text}. ¿Me puedes ayudar a crear un guión literario que capture la atención de mi audiencia objetivo y los haga querer compartirlo con sus amigos?`;
+ 
     await complete(prompt);
     
   }
